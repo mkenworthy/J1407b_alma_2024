@@ -1,57 +1,140 @@
-% Define document class
-\documentclass[twocolumn]{aastex631}
+\documentclass[trackchanges]{aastex701}
 \usepackage{showyourwork}
+%% https://journals.aas.org/research-note-preparation-guidelines
 
-% Begin!
+% possible observational example to follow:
+% https://iopscience.iop.org/article/10.3847/2515-5172/ad8439
+
+%% This initial command takes arguments that can be used to easily modify 
+%% the output of the compiled manuscript. Any combination of arguments can be 
+%% invoked like this:
+%%
+%% \documentclass[argument1,argument2,argument3,...]{aastex701}
+%%
+%% Six of the arguments are typestting options. They are:
+%%
+%%  twocolumn   : two text columns, 10 point font, single spaced article.
+%%                This is the most compact and represent the final published
+%%                derived PDF copy of the accepted manuscript from the publisher
+%%  default     : one text column, 10 point font, single spaced (default).
+%%  manuscript  : one text column, 12 point font, double spaced article.
+%%  preprint    : one text column, 12 point font, single spaced article.  
+%%  preprint2   : two text columns, 12 point font, single spaced article.
+%%  modern      : a stylish, single text column, 12 point font, article with
+%% 		  wider left and right margins. This uses the Daniel
+%% 		  Foreman-Mackey and David Hogg design.
+%%
+%% Note that you can submit to the AAS Journals in any of these 6 styles.
+%%
+%% There are other optional arguments one can invoke to allow other stylistic
+%% actions. The available options are:
+%%
+%%   astrosymb    : Loads Astrosymb font and define \astrocommands. 
+%%   tighten      : Makes baselineskip slightly smaller, only works with 
+%%                  the twocolumn substyle.
+%%   times        : uses times font instead of the default.
+%%   linenumbers  : turn on linenumbering. Note this is mandatory for AAS
+%%                  Journal submissions and revisions.
+
+%% If you want to create your own macros, you can do so
+%% using \newcommand. Your macros should appear before
+%% the \begin{document} command.
+
 \begin{document}
 
-% Title
-\title{An open source scientific article}
+\title{Non-detection of J1407~b in ALMA Band 7 observations}
 
-% Author list
-\author{@mkenworthy}
+\author[orcid=0000-0001-9443-0463,sname='Klaassen']{Pamela Klaassen}
+\affiliation{UK Astronomy Technology Centre, Royal Observatory Edinburgh, Edinburgh, EH9 3HJ, UK}
+\email[show]{pamela.klaassen@stfc.ac.uk}  
 
-% Abstract with filler text
+\author[orcid=0000-0002-7064-8270,sname='Kenworthy']{Matthew A. Kenworthy} 
+\affiliation{Leiden Observatory, Leiden University, Postbus 9513, 2300 RA Leiden, The Netherlands}
+\email{kenworthy@strw.leidenuniv.nl}
+
+%% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-    Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
-    Curabitur dictum gravida mauris, consectetuer id, vulputate a, magna.
-    Donec vehicula augue eu neque, morbi tristique senectus et netus et.
-    Mauris ut leo, cras viverra metus rhoncus sem, nulla et lectus vestibulum.
-    Phasellus eu tellus sit amet tortor gravida placerat.
-    Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
-    Praesent eget sem vel leo ultrices bibendum.
-    Aenean faucibus, morbi dolor nulla, malesuada eu, pulvinar at, mollis ac.
-    Curabitur auctor semper nulla donec varius orci eget risus.
-    Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
-    Duis eget orci sit amet orci dignissim rutrum.
+
+We report on ALMA observations towards the star J1407 taken in XXXX.
+%
+We do not detect the source seen in Band 7 observations in 2021, and place upper limits on a source at that location in this 2024 data.
+
+% The limit is 150 for RNAAS manuscripts.
 \end{abstract}
 
-% Main body with filler text
-\section{Introduction}
-\label{sec:intro}
+%% Keywords should appear after the \end{abstract} command. 
+%% The AAS Journals now uses Unified Astronomy Thesaurus (UAT) concepts:
+%% https://astrothesaurus.org
+%% You will be asked to selected these concepts during the submission process
+%% but this old "keyword" functionality is maintained in case authors want
+%% to include these concepts in their preprints.
+%%
+%% You can use the \uat command to link your UAT concepts back its source.
+\keywords{\uat{Circumstellar disks}{235} --- \uat{Exoplanet rings}{494} --- \uat{Interstellar medium}{847}}
 
-Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
-Ut purus elit, vestibulum ut, placerat ac, adipiscing vitae, felis.
-Curabitur dictum gravida mauris, consectetuer id, vulputate a, magna.
-Donec vehicula augue eu neque, morbi tristique senectus et netus et.
-Mauris ut leo, cras viverra metus rhoncus sem, nulla et lectus vestibulum.
-Phasellus eu tellus sit amet tortor gravida placerat.
-Integer sapien est, iaculis in, pretium quis, viverra ac, nunc.
-Praesent eget sem vel leo ultrices bibendum.
-Aenean faucibus, morbi dolor nulla, malesuada eu, pulvinar at, mollis ac.
-Curabitur auctor semper nulla donec varius orci eget risus.
-Duis nibh mi, congue eu, accumsan eleifend, sagittis quis, diam.
-Duis eget orci sit amet orci dignissim rutrum.
+\section{Introduction} 
 
-Nam dui ligula, fringilla a, euismod sodales, sollici- tudin vel, wisi.
-Morbi auctor lorem non justo, nam lacus libero, pretium at, lobortis vitae.
-Donec aliquet, tortor sed accumsan bibendum, erat ligula aliquet magna.
-Morbi ac orci et nisl hendrerit mollis, suspendisse ut massa, cras nec ante.
-Pellentesque a nulla cum sociis natoque penatibus et magnis dis parturient.
-Aliquam tincidunt urna, nulla ullamcorper vestibulum turpis.
-Pellentesque cursus luctus mauris \citep{Luger2021}.
+A complex series of dimmings of the young star J1407XXXXX (hereafter shortened to J1407) in May 2007 was hypothesised to be caused by a giant circumsecondary disk transiting the disk of the star \citep{Mamajek13,Kenworthy15}.
+%
+No other eclipses have been seen to date towards J1407, and none are present in archival data \citep{Mentel18}.
+%
+An unresolved source was seen in ALMA data \citep{Kenworthy20}.
 
-\bibliography{bib}
+\section{Observations and Data Processing} 
+
+We observed J1407 in Band 7 using ALMA on UT 2024 06 26 .
+%
+Processed using X and Y.
+%
+Upper limits provided at the locations of J1407 the star, the source in 2019, and the predicted position assuming free floating object to this epoch.
+
+2023.1.01488.S
+
+% from:
+% % message://%3c25E49D7A-D31C-4A84-B59F-586B61EE99FE@strw.leidenuniv.nl%3e
+% message://%3c16264915-FB75-4824-8C2A-4464002D8CD2@strw.leidenuniv.nl%3e
+% message://%3c5CF854FA-E688-4E54-81BA-72589E4195FB@stfc.ac.uk%3e
+% message://%3cC4ABF994-D605-4A35-93FB-9C0E219B9637@strw.leidenuniv.nl%3e
+% message://%3cDCE91730-D675-4A59-891F-EE1B7ADB842B@stfc.ac.uk%3e
+% message://%3c1672713721.2.1721651240318@asa-mail-eu-production-2024apr%3e
+% message://%3c9190D323-F4F6-4D9E-907B-A664019C4CB1@strw.leidenuniv.nl%3e
+% message://%3c64BF0674-37AA-4FC5-BC24-39D639E3A86A@stfc.ac.uk%3e
+% message://%3c1B6B48A6-8A44-4E15-86EC-06FE0D4131EE@strw.leidenuniv.nl%3e
+
+This is the first look from the pipeline products.  
+
+Red circle = coordinates of the 2024 diamond in the plot you sent
+Black circle = coordinates of the 2024 circle in the plot you sent.
+Contours = starting at 1 sigma, in intervals of 1 sigma. (Where I've been very generous and called sigma 1.3 e-5 Jy/beam)
+
+Looking at our 2020 paper, the object we detected had a peak flux of 89 muJy.  Our RMS noise here is somewhere between 13 and 15 microJy/beam, so we should have detected it at the ~5-6 sigma level.
+
+
+
+\section{Results and Discussion}
+
+NO detection: either it was a noise spike, a transient extragalactic source, or the thing is variable/dimmer/undetectable.
+
+\begin{figure*}[ht!]
+\plotone{figures/data_2024.png}
+\caption{Band 7 observations towards J1407.
+\label{fig:j1407band6}}
+\end{figure*}
+
+\facilities{ALMA}
+
+\begin{acknowledgements}
+
+This paper makes use of the following ALMA data: ADS/JAO.ALMA\#2023.1.01488.S. ALMA is a partnership of ESO (representing its member states), NSF (USA) and NINS (Japan), together with NRC (Canada), MOST and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation with the Republic of Chile. The Joint ALMA Observatory is operated by ESO, AUI/NRAO and NAOJ.
+
+\end{acknowledgements}
+
+%% the manuscript. Authors should list each code and include either a
+%% citation or url to the code inside ()s when available.
+\software{astropy \citep{astropy:2013,astropy:2018}
+}
+
+\bibliography{kenworthy}{}
+\bibliographystyle{aasjournalv7}
 
 \end{document}
