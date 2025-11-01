@@ -1,6 +1,43 @@
 dependencies:
-  - conda-forge::numpy=1.19.2
-  - conda-forge::pip=21.0.1
-  - conda-forge::python=3.9
-  - pip:
-      - matplotlib==3.4.3
+  - conda-forge::numpy
+  - conda-forge::pip
+  - conda-forge::python=3.10
+  - conda-forge::matplotlib
+  - conda-forge::astropy
+  - conda-forge::jupyter
+  - conda-forge::photutils
+#  - pip:
+#      - casatasks
+#
+# casatasks-6.6.5.31
+# 
+# MAK installing casatasks - TL;DR needs a data directory and to download 333MB of stuff to be installed
+# In [1]: from casatasks import immoments
+
+# data_update: path must exist as a directory and it must be owned by the user, path = /Users/kenworthy/.casa/data
+
+# Warning: measurespath must exist as a directory and it must be owned by the user.
+# Warning: no auto update is possible on this measurespath by this user.
+
+# The expected casa data was not found at measurespath. CASA may still work if the data can be found in datapath.
+# The expected measures data was not found at measurespath. CASA may still work if the data can be found in datapath.
+# visit https://casadocs.readthedocs.io/en/stable/notebooks/external-data.html for more information
+
+# 2025-11-01 09:30:04 SEVERE  ::casa
+# 2025-11-01 09:30:04 SEVERE  ::casa  data_update: path must exist as a directory and it must be owned by the user, path = /Users/kenworthy/.casa/data
+# 2025-11-01 09:30:04 SEVERE  ::casa
+# 2025-11-01 09:30:04 SEVERE  ::casa  Warning: measurespath must exist as a directory and it must be owned by the user.
+# 2025-11-01 09:30:04 SEVERE  ::casa  Warning: no auto update is possible on this measurespath by this user.
+# 2025-11-01 09:30:04 SEVERE  ::casa
+# 2025-11-01 09:30:04 SEVERE  ::casa  The expected casa data was not found at measurespath. CASA may still work if the data can be found in datapath.
+# 2025-11-01 09:30:04 SEVERE  ::casa  The expected measures data was not found at measurespath. CASA may still work if the data can be found in datapath.
+# 2025-11-01 09:30:04 SEVERE  ::casa  visit https://casadocs.readthedocs.io/en/stable/notebooks/external-data.html for more information
+# 2025-11-01 09:30:04 SEVERE  ::casa
+# measures data is not available
+#
+#
+# mkdir ~/.casa/data
+# ipython
+# from casatasks import immoments
+# downloading casarundata contents to  /Users/kenworthy/.casa/data (333M) ...
+# # 
