@@ -236,8 +236,8 @@ def create_image(filename,centre,size,plotloc):
     ## Also plot my calculated expected positions derived using Astropy  
     ## (I swapped the plotting marker to make it more visible that there are
     ## two points plotted at that location)
-    plot_point(ax,ALMA_2024_pam,'orange','d',"Pam's PM")
-    plot_point(ax,J1407_2024_pam,'orange','o',"Pam's PM")
+   # plot_point(ax,ALMA_2024_pam,'orange','d',"Pam's PM")
+   # plot_point(ax,J1407_2024_pam,'orange','o',"Pam's PM")
 
     ### show proper motion lines - along ALMA direction
     plot_line(ax,c_1ep_gaia_eclipse,c_2ep_ALMA_source,
