@@ -1,6 +1,6 @@
 \documentclass[trackchanges]{aastex701}
 %% https://journals.aas.org/research-note-preparation-guidelines
-\usepackage{showyourwork}
+
 % possible observational example to follow:
 % https://iopscience.iop.org/article/10.3847/2515-5172/ad8439
 
@@ -39,6 +39,9 @@
 %% using \newcommand. Your macros should appear before
 %% the \begin{document} command.
 \usepackage{comment}
+\newcommand{\pk}[1]{\textit{\textcolor{orange}{#1}}}
+
+\usepackage{showyourwork}
 
 \begin{document}
 
@@ -55,9 +58,9 @@
 %% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
 
-We report on ALMA Band 7 continuum observations towards the star J1407 taken in mid 2024.
+We report on ALMA Band 7 continuum observations towards the star J1407 taken in mid 2024. These observations were a followup on a previous detection of an emission source in the J1407 field of view at an unexpected position in 2017. Proper motion analysis indicated that if this were the object responsible for the 2007 eclipse of J1407, it would be detectable at a new position, but still within an ALMA field of view in 2024.
 %
-We do not detect the source seen in the previous ALMA Band 7 observations in 2017, and place upper limits on a source at the proper motion corrected expected location in this 2024 data.
+Here we present the non-detection of emission in the ALMA field of view, neither at the 2017 position, nor at the position expected from proper motions. We place upper limits on a source at the proper motion corrected expected location in this 2024 data.
 
 % The limit is 150 for RNAAS manuscripts.
 \end{abstract}
@@ -78,14 +81,14 @@ A complex series of dimmings of the young star J1407XXXXX (hereafter shortened t
 %
 No other eclipses have been seen to date towards J1407, and none are present in archival data \citep{Mentel18}.
 %
-Followup ALMA observations were undertaken to determine whether the dust emission from the \textit{eclipsing?} object could be detected in Band 7 (345 GHz) continuum emission. With an rms noise level of 18.6$\mu$Jy, an unresolved source was seen in the ALMA data \citep{Kenworthy20} with a peak flux of 79$\mu$Jy, spatially offset from the position expected for J1407 given its proper motion, suggesting a chance transit. That detection combined with the original epoch data suggested that the ALMA detected object would have moved sufficiently to be detectable at a new, spatially separate, position in 2024.
+Followup ALMA observations were undertaken to determine whether the dust emission from the eclipsing object could be detected in Band 7 (345 GHz) continuum emission. With an rms noise level of 18.6$\mu$Jy, an unresolved source was seen in the ALMA data \citep{Kenworthy20} with a peak flux of 79$\mu$Jy, spatially offset from the position expected for J1407 given its proper motion, suggesting a chance transit. That detection combined with the original epoch data suggested that the ALMA detected object would have moved sufficiently to be detectable at a new, spatially separate, position in 2024.
 
 \section{Observations and Data Processing} 
 
 We observed J1407 in continuum emission in Band 7 using ALMA between 26 June and 13 July 2024 for project 2023.1.001488.S (PI: M. Kenworthy). The array was in configuration C-8 and observations were taken in TDM mode, giving high resolution continuum observations. J1407-4302 was used as both bandpass and phase calibrator and J1427-4206 was used for amplitude calibration. The data were pipeline processed, and the individual measurement sets were concatenated in the uv plane before imaging. Imaging was peformed with a manual mask and allowed to progress for 1000 iterations before stopping. The final image has a synthesized beam of $0.12''\times0.07''$ at pa=111$^\circ$, and an rms noise limit of 17.5$\mu$Jy, close to that of the previous observations.  
 
 
-Figure \ref{fig:J1407_epoch_comparison} shows both epochs of  ALMA observations of the region: from 2017 (left) and 2024 (right). Also labelled on these plots are: (1) the location of J1407 when the eclipse occured in 2007, (2) the position of the $\sim4\sigma$ ALMA detection in 2017 as well as the expected position of J1407 in the same epoch, and (3) the projected positions of the ALMA source and J1407 in 2024. The third epoch (2024) positions of the ALMA source and J1407 were derived using the built in proper motion functionality in \texttt{astropy.coordinates} having derived the proper motion from the first and second epoch observations in (1) and (2) above.
+Figure \ref{fig:J1407_epoch_comparison} shows both epochs of  ALMA observations of the region: from 2017 (left) and 2024 (right). Also labelled on these plots are: (1) the location of J1407 when the eclipse occured in 2007, (2) the position of the $\sim4\sigma$ ALMA detection in 2017 and the expected position of J1407 in the same epoch, as well as (3) the projected positions of the ALMA source and J1407 in 2024. The third epoch (2024) positions of the ALMA source and J1407 were derived using the built in proper motion functionality in \texttt{astropy.coordinates} having derived the proper motion from the first and second epoch observations in (1) and (2) above.
 %
 %Upper limits provided at the locations of J1407 the star, the source in 2019, and the predicted position assuming free floating object to this epoch.
 
@@ -117,13 +120,18 @@ Figure \ref{fig:J1407_epoch_comparison} shows both epochs of  ALMA observations 
 
 As can be seen in Figure \ref{fig:J1407_epoch_comparison}, there is no detection of 345 GHz continuum emission at the projected location of the 2017 ALMA continuum source had it been responsible for the 2007 eclipse of J1407. If the target continued to be as bright as in 2017, it should have been detected at the $\sim4\sigma$ level, but there is nothing above the rms noise level in the emission map at this position.
 
-This suggests that the original detection was likely a noise spike, or some form of time varying or dimming object. Had it been a background extragalactic source, it should have remained detectable at the $\sim4\sigma$ level at the same position as the 2017 observation. 
+
+There were a few models put forward in \cite{Kenworthy20} for what could be causing that emission source in the 2017 ALMA data: a free-floating ring system that had a chance alignment with J1407 in 2007 or an unrelated extragalactic background object unrelated to the eclipse. The latter was dismissed based on statistically small chances of an object with that flux being detected that close to J1407. The former was deemed more realistic because the proper motion of that emission source on that 10 year baseline was consistent with the derived eclipsing objects transverse velocity calculated in \cite{Kenworthy15}. 
+
+Comparing our current noise levels to the dust models presented in \cite{Kenworthy20}, thick disks with dust grains larger than 1mm, as favoured in the previous paper, \textit{of any mass} are now ruled out.  This suggests that the original detection was likely a noise spike, or some form of time varying or dimming object. Had it been a background extragalactic source, it should have remained detectable at the $\sim4\sigma$ level at the same position as the 2017 observation. 
 
 
 
 \begin{figure*}
     \script{plot_proper_motion_figure.py}
     \includegraphics[width=1\textwidth]{figures/j1407_pm.pdf}
+%    \script{proper_motion_plotting.py}
+%    \includegraphics[width=1\textwidth]{figures/J1407_epoch_comparison.png}
     \caption{Multi-epoch ALMA observations of the J1407 area. There was a $\sim4\sigma$ 345 GHz continuum detection in the 2017 epoch observations that does not seem to persist to the 2024 observations, despite the two observations having similar beams and noise levels.}
     \label{fig:J1407_epoch_comparison}
     
@@ -152,6 +160,7 @@ This paper makes use of the following ALMA data: ADS/JAO.ALMA\#2023.1.01488.S. A
 %% the manuscript. Authors should list each code and include either a
 %% citation or url to the code inside ()s when available.
 \software{astropy \citep{astropy:2013,astropy:2018}
+        casa \citep{CASA2022}
 }
 
 \bibliography{kenworthy}{}
