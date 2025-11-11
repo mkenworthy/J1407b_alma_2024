@@ -55,12 +55,20 @@
 \affiliation{Leiden Observatory, Leiden University, Postbus 9513, 2300 RA Leiden, The Netherlands}
 \email{kenworthy@strw.leidenuniv.nl}
 
+\author[0000-0003-2008-1488]{Eric E. Mamajek}
+\affiliation{Jet Propulsion Laboratory, California Institute of Technology, Pasadena, CA 91109, USA}
+\email{mamajek@jpl.nasa.gov}
+
+\author[orcid=0000-0002-5510-8751,sname=’triaud']{Amaury H.M.J. Triaud}
+\affiliation{School of Physics \& Astronomy, University of Birmingham, Edgbaston, Birmingham B15 2TT, United Kingdom}
+\email[show]{a.triaud@bham.ac.uk}  
+
 %% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
 
-We report on ALMA Band 7 continuum observations towards the star J1407 taken in mid 2024. These observations were a followup on a previous detection of an emission source in the J1407 field of view at an unexpected position in 2017. Proper motion analysis indicated that if this were the object responsible for the 2007 eclipse of J1407, it would be detectable at a new position, but still within an ALMA field of view in 2024.
+We report on ALMA Band 7 continuum observations towards the star 1SWASP J140747.93-394542.6 taken in mid 2024. These observations were a followup on a previous detection of an emission source in the J1407 field of view at an unexpected position in 2017. Proper motion analysis indicated that if this were the object responsible for the 2007 eclipse of J1407, it would be detectable at a new position, but still within an ALMA field of view in 2024.
 %
-Here we present the non-detection of emission in the ALMA field of view, neither at the 2017 position, nor at the position expected from proper motions. We place upper limits on a source at the proper motion corrected expected location in this 2024 data.
+Here we present the non-detection of emission in the ALMA field of view (to a 1$\sigma$ upper limit of 17.5 $\mu$Jy), neither at the 2017 position, nor at the position expected from proper motions. We place upper limits on a source at the proper motion corrected expected location in this 2024 data, and rule out the possibility of a dusty object being responsible for the 2007 eclipse.
 
 % The limit is 150 for RNAAS manuscripts.
 \end{abstract}
@@ -75,7 +83,8 @@ Here we present the non-detection of emission in the ALMA field of view, neither
 %% You can use the \uat command to link your UAT concepts back its source.
 \keywords{\uat{Circumstellar disks}{235} --- \uat{Exoplanet rings}{494} --- \uat{Interstellar medium}{847}}
 
-\section{Introduction} 
+\section{Introduction}
+
 
 A complex series of dimmings of the young star 1SWASP J140747.93-394542.6 (hereafter shortened to J1407) in May 2007 was hypothesised to be caused by a giant circumsecondary disk transiting the disk of the star \citep{Mamajek13,Kenworthy15}.
 %
@@ -153,7 +162,7 @@ NO detection: either it was a noise spike, a transient extragalactic source, or 
 
 \begin{acknowledgements}
 
-This paper makes use of the following ALMA data: ADS/JAO.ALMA\#2023.1.01488.S. ALMA is a partnership of ESO (representing its member states), NSF (USA) and NINS (Japan), together with NRC (Canada), MOST and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation with the Republic of Chile. The Joint ALMA Observatory is operated by ESO, AUI/NRAO and NAOJ.
+This paper makes use of the following ALMA data: ADS/JAO.ALMA\#2023.1.01488.S. ALMA is a partnership of ESO (representing its member states), NSF (USA) and NINS (Japan), together with NRC (Canada), MOST and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation with the Republic of Chile. The Joint ALMA Observatory is operated by ESO, AUI/NRAO and NAOJ. Part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration (80NM0018D0004).
 
 \end{acknowledgements}
 
@@ -161,6 +170,7 @@ This paper makes use of the following ALMA data: ADS/JAO.ALMA\#2023.1.01488.S. A
 %% citation or url to the code inside ()s when available.
 \software{astropy \citep{astropy:2013,astropy:2018}
         casa \citep{CASA2022}
+        showyourwork \citep{Luger2021}
 }
 
 \bibliography{kenworthy}{}
