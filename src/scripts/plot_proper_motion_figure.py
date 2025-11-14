@@ -217,7 +217,7 @@ def create_image(filename,centre,size,plotloc):
 
 
     # draw the ALMA image & label the axes
-    pos = ax.imshow(hdu.data,origin='lower', cmap='viridis')
+    pos = ax.imshow(hdu.data,origin='lower', cmap='viridis',vmin=-6e-5,vmax=8e-5)
     ax.set_title(f"{filename.split('/')[0]} ALMA observation",fontsize=20)
     ax.set_xlabel('Right Ascension',fontsize=16)
     ax.set_ylabel('Declination',fontsize=16)
