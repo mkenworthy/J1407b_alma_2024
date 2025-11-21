@@ -25,14 +25,16 @@ dag:
 
 # Externally-hosted datasets, e.g. on Zenodo
 datasets:
-  # 10.5281/zenodo.6468327:
-  #   contents:
-  #     TOI640b.json: src/data/TOI640b.json
+  10.5281/zenodo.17670200:
+    contents:
+        J1407_cont_2017.image.pbcor.fits: src/data/2017/J1407_cont_2017.image.pbcor.fits
+        J1407_cont_2024.image.pbcor.fits: src/data/2024/J1407_cont_2024.image.pbcor.fits
 
 # Custom file dependencies
 dependencies:
-  # src/scripts/my_script.py:
-  #   - src/data/dataset_for_my_script.dat
+  src/scripts/plot_proper_motion_figure.py:
+    - src/data/2017/J1407_cont_2017.image.pbcor.fits
+    - src/data/2024/J1407_cont_2024.image.pbcor.fits
   # src/tex/ms.tex:
   #   - src/tex/stylesheet.tex
 

@@ -82,9 +82,9 @@
 %% Mark off the abstract in the ``abstract'' environment. 
 \begin{abstract}
 
-We report on ALMA Band 7 continuum observations towards the star 1SWASP J140747.93-394542.6 taken in mid 2024. These observations were a followup on a previous detection of an emission source in the J1407 field of view at an unexpected position in 2017. Proper motion analysis indicated that if this were the object responsible for the 2007 eclipse of J1407, it would be detectable at a new position, but still within an ALMA field of view in 2024.
+We report on ALMA Band 7 continuum observations towards the star 1SWASP J140747.93-394542.6 taken in mid 2024. These observations were a follow-up of a previous detection of an emission source in the J1407 field of view at an unexpected position in 2017. Proper motion analysis indicated that if this were the object responsible for the 2007 eclipse of J1407, it would be detectable at a new position, but still within an ALMA field of view in 2024.
 %
-Here we present the non-detection of emission in the ALMA field of view (to a 1$\sigma$ upper limit of 17.5 $\mu$Jy), neither at the 2017 position, nor at the position expected from proper motions. We place upper limits on a source at the proper motion corrected expected location in this 2024 data, and rule out the possibility of a dusty object being responsible for the 2007 eclipse.
+Here we present the non-detection of emission in the ALMA field of view (to a 1$\sigma$ upper limit of 17.5 $\mu$Jy),at both the 2017 position, and the position expected from proper motions. We place upper limits on a source at the proper motion corrected expected location in this 2024 data, and rule out the possibility of a dusty object being responsible for the 2007 eclipse.
 
 % The limit is 150 for RNAAS manuscripts.
 \end{abstract}
@@ -106,7 +106,7 @@ A complex series of dimmings of the young star 1SWASP J140747.93-394542.6 (herea
 %
 No other eclipses have been seen to date towards J1407, and none are present in archival data \citep{Mentel18}.
 %
-Followup ALMA observations were undertaken to determine whether the dust emission from the eclipsing object could be detected in Band 7 (345 GHz) continuum emission. With an rms noise level of 18.6$\mu$Jy, an unresolved source was seen in the ALMA data \citep{Kenworthy20} with a peak flux of 79$\mu$Jy, spatially offset from the position expected for J1407 given its proper motion, suggesting a chance transit. That detection combined with the original epoch data suggested that the ALMA detected object would have moved sufficiently to be detectable at a new, spatially separate, position in 2024.
+Initial ALMA observations were undertaken in 2017 to determine whether the dust emission from the eclipsing object could be detected in Band 7 (345 GHz) continuum emission. With an rms noise level of 18.6$\mu$Jy, an unresolved source was seen in the ALMA data \citep{Kenworthy20} with a peak flux of 79$\mu$Jy, spatially offset from the position expected for J1407 given its proper motion, suggesting a chance transit. The distance between the 2007 position of J1407 and the 2017 flux detection suggested a proper motion consistent with the ALMA detected object having moved sufficiently to be detectable at a new, spatially separate, position in 2024. Here we present a second epoch follow-up of those original ALMA observations to attempt to detect that object at its new position.
 
 \section{Observations and Data Processing} 
 
@@ -148,7 +148,7 @@ As can be seen in Figure \ref{fig:J1407_epoch_comparison}, there is no detection
 
 There were a few models put forward in \cite{Kenworthy20} for what could be causing that emission source in the 2017 ALMA data: a free-floating ring system that had a chance alignment with J1407 in 2007 or an unrelated extragalactic background object unrelated to the eclipse. The latter was dismissed based on statistically small chances of an object with that flux being detected that close to J1407. The former was deemed more realistic because the proper motion of that emission source on that 10 year baseline was consistent with the derived eclipsing objects transverse velocity calculated in \cite{Kenworthy15}. 
 
-Comparing our current noise levels to the dust models presented in \cite{Kenworthy20}, thick disks with dust grains larger than 1mm, as favoured in the previous paper, \textit{of any mass} are now ruled out.  This suggests that the original detection was likely a noise spike, or some form of time varying or dimming object. Had it been a background extragalactic source, it should have remained detectable at the $\sim4\sigma$ level at the same position as the 2017 observation. 
+Comparing our current noise levels to the dust models presented in \cite{Kenworthy20}, thick disks with dust grains larger than 1mm, as favoured in the previous paper, \textit{of any mass} are now ruled out.  This suggests that the original detection was likely a noise spike, or some form of time varying or dimming object. Had it been a persistent background source, it should have remained detectable at the $\sim4\sigma$ level at the same position as the 2017 observation. 
 
 
 
@@ -180,11 +180,14 @@ NO detection: either it was a noise spike, a transient extragalactic source, or 
 
 This paper makes use of the following ALMA data: ADS/JAO.ALMA\#2023.1.01488.S. ALMA is a partnership of ESO (representing its member states), NSF (USA) and NINS (Japan), together with NRC (Canada), MOST and ASIAA (Taiwan), and KASI (Republic of Korea), in cooperation with the Republic of Chile. The Joint ALMA Observatory is operated by ESO, AUI/NRAO and NAOJ. Part of this research was carried out at the Jet Propulsion Laboratory, California Institute of Technology, under a contract with the National Aeronautics and Space Administration (80NM0018D0004).
 
+This study was carried out using the reproducibility software \href{https://github.com/showyourwork/showyourwork}{\showyourwork}
+   \citep{Luger2021}, which leverages continuous integration to programmatically download the data from \href{https://zenodo.org/}{zenodo.org}, create the figures, and compile the manuscript. Each figure caption contains two links: one to the dataset stored on zenodo used in the corresponding figure, and the other to the script used to make the figure (at the commit corresponding to the current build of the manuscript). The git repository associated to this study is publicly available at \url{https://github.com/mkenworthy/J1407b_alma_2024}. The datasets are stored at \url{https://doi.org/10.5281/zenodo.17670200}.
+
 \end{acknowledgements}
 
 %% the manuscript. Authors should list each code and include either a
 %% citation or url to the code inside ()s when available.
-\software{astropy \citep{astropy:2013,astropy:2018}
+\software{astropy \citep{astropy:2013,astropy:2018,astropy:2022}
         casa \citep{CASA2022}
         showyourwork \citep{Luger2021}
 }

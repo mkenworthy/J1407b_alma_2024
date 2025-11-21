@@ -250,8 +250,10 @@ def create_image(filename,centre,size,plotloc):
 
 fig = plt.figure(figsize=(16, 5))
 
-files = ['2017/uid___A001_X87c_X409._1SWASP_J140747.93-394542.6__sci.spw17_19_21_23.cont.I.pbcor.fits',
-         '2024/J1407_cont.image.pbcor.fits']
+#files = ['2017/uid___A001_X87c_X409._1SWASP_J140747.93-394542.6__sci.spw17_19_21_23.cont.I.pbcor.fits',
+#         '2024/J1407_cont.image.pbcor.fits']
+
+files = ['2017/J1407_cont_2017.image.pbcor.fits','2024/J1407_cont_2024.image.pbcor.fits']
 
 for index,file in enumerate(files):
     """
